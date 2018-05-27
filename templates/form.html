@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+
+   <head>
+      <title>Home Form</title>
+   </head>
+
+   <body>
+      <h1>Home Page</h1>
+      <p>Enter the Url you want to shorten</p>
+
+      <form method="POST">
+
+      {{ form.as_p }}
+      {% csrf_token %}
+      <input type="submit" value="Get Short URL">
+    </form>
+
+    {% if short_url != none %}
+      Short URL is  {{ short_url }}
+      {%endif%}
+   </body>
+
+</html>
