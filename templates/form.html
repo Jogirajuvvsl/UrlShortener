@@ -4,6 +4,9 @@
 
    <head>
       <title>Home Form</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    </head>
 
    <body>
@@ -11,10 +14,11 @@
       <p>Enter the Url you want to shorten</p>
 
       <form method="POST">
-
+      <div class="form-group">
       {{ form.as_p }}
       {% csrf_token %}
       <input type="submit" value="Get Short URL">
+    </div>
     </form>
 
     {% if short_url != none %}
